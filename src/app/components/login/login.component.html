@@ -1,0 +1,47 @@
+<div class="main">
+    <div class="container display-flex">
+      <div class="row">
+        <div class="col-xs-12 col-lg-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Fazer Login</h5>
+                    <form [formGroup]="formLogin" (ngSubmit)="login();">
+                        <div class="input-group mb-3">
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="E-mail"
+                                aria-label="email"
+                                aria-describedby="email"
+                                formControlName="email"
+                                autocapitalize="off"
+                            />
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input
+                                type="password"
+                                class="form-control"
+                                placeholder="Senha"
+                                aria-label="password"
+                                aria-describedby="password"
+                                formControlName="password"
+                                autocomplete="off"
+                            />
+                        </div>
+                        
+                        <button
+                            class="btn btn-primary"
+                            type="submit"
+                            [disabled]="formLogin.invalid">
+                        ENTRAR
+                        </button>
+                    </form>
+                </div>
+            </div>   
+          </div>
+      </div>
+    </div>
+</div>
+    
+    

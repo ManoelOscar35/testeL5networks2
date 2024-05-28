@@ -1,0 +1,61 @@
+.row {
+    .col-md-9{
+        margin-left: -80px;
+
+        .display-flex {
+            display: flex;
+            justify-content: space-between;
+            
+            form {
+                margin-top: 90px;
+                margin-right: 20px;
+            }
+
+            h2 {
+                margin-top: 90px;
+                margin-left: 11px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+
+            
+            nav {
+                margin-left: 113px;
+            }
+        
+            .display-flex {
+                margin-left: 50px;
+                width: 520px;
+
+                form {
+                    margin-top: 90px;
+                    margin-left: 10px;
+                }
+
+                h2 {
+                    margin-left: 60px;
+                }
+            }
+            
+
+            .container {
+                margin-left: 100px;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            margin-right: 60px;
+
+            .card {
+                height: 300px; 
+                margin-bottom: 50px;
+            }
+        }  
+    }
+}

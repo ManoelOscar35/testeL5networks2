@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col-md-3 col-sm-12">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-9 col-sm-12">
+        <div class="display-flex">
+            <div>
+                <h2>Personagens</h2>
+            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control  me-2" #termoDaBusca type="search" placeholder="Buscar" aria-label="Search" (keyup)="buscarMethod(termoDaBusca.value);">
+            </form>
+        </div>
+        <div class="container">
+           <div class="card" style="width: 18rem;" *ngFor="let p of personagensArray">
+                <h5 class="p-1" style="cursor: pointer;" (click)="nomePersonagem(p.name);" routerLink="/dashboard/detalhes-personagens">{{p.name}}</h5>
+                <img [src]="p.image" class="card-img-top" alt="...">
+            </div>
+        </div>
+        <nav aria-label="...">
+            <ul class="pagination">
+              <li class="page-item" style="cursor: pointer;"><a class="page-link" (click)="getPersonagens(page - 1)">Prev</a></li>
+              <li class="page-item" style="cursor: pointer;"><a class="page-link" (click)="getPersonagens(page + 1)">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

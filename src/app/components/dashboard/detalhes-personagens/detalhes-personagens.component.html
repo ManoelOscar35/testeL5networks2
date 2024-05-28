@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col-md-3 col-sm-12">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-9 col-sm-12">
+        <h2>Detalhes do Personagem</h2>
+        <div class="container">
+           <div class="card" style="width: 18rem;">
+                <h5 class="p-1">{{personagem?.name}}</h5>
+                <img [src]="personagem?.image" class="card-img-top" alt="...">
+                <p>{{personagem?.created}}</p>
+                <div *ngFor="let e of personagem?.episode">
+                    <p>{{e}}</p>
+                </div>
+                <p>{{personagem?.gender}}</p>
+                <p>{{personagem?.location?.name}}</p>
+                <p>{{personagem?.location?.url}}</p>
+                <p>{{personagem?.origin?.name}}</p>
+                <p>{{personagem?.origin?.url}}</p>
+                <p>{{personagem?.species}}</p>
+                <p>{{personagem?.status}}</p>
+                <p>{{personagem?.type}}</p>
+                <p>{{personagem?.url}}</p>
+            </div>
+        </div>
+    </div>
+</div>
